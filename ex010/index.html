@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho  do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+    <!-- Primeiro adiciona a tag img src, e depois vai colocando as variações da imagem sempre em cima, seguindo a ordem.-->
+
+
+
+
+    <h1>Reproduzindo audios</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/confidentkurt-tracktribe.mp3" controls autoplay lopp></audio>
+    <!--Nem todos os dispositivos são compátiveis com o MP3, por isso tem o próximo passo. Onde o arquivo pode ser mp3, wav, ogg. Dependendo do disso o parâmetro type="audio/#" pode alterar o que vem depois do /. O programa vai tentar gerar o áudio de todas as formas colocadas. -->
+    <audio preload="metadata" >
+    <source src="midia/confidentkurt-tracktribe.mp3" type="audio/mpeg">
+    <source src="midia/confidentkurt-tracktribe.ogg" type="audio/ogg">
+    <source src="midia/confidentkurt-tracktribe.wav" type="audio/wav">
+    </audio>
+<p>Infelizmente seu navegador não permitir reproduzir aúdio. <a href="midia/confidentkurt-tracktribe.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+
+
+    <!--O parâmetro controls e autoplay são essênciais, o control é para aparecer o play, duração, volume.
+    No parâmetro preload existem 3 tipos, auto(padrao), metadata e none. O metadata é o mais adequado.-->
+</body>
+</html>
